@@ -490,14 +490,6 @@ filter_section {
     width: 80vw;
 }
 
-.personaleter {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-}
-
 .overskrift,
 filter_section {
     margin: 0 auto;
@@ -612,10 +604,6 @@ filter_section {
     cursor: pointer;
 }
 
-.valgt {
-    color: green !important;
-}
-
 .blog {
     background-color: #fff;
     padding: 20px;
@@ -661,12 +649,14 @@ filter_section {
 }
 
 .filter_nav h3 {
-    margin-right: 30px;
+    margin-right: 25px;
     cursor: pointer;
 }
 
 .valgt {
-    color: green !important;
+    color: #fff !important;
+    padding: 0 15px;
+    background-color: #333F78;
 }
 
 
@@ -751,6 +741,12 @@ filter_section {
 
 .color_text {
     color: #68A849;
+}
+
+@media screen and (max-width: 473px) {
+    .hide-mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -850,8 +846,15 @@ filter_section {
 /*============================================================================================*/
 /* Højskoleophold sections */
 
+.season_title {
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    padding-top: 180px;
+}
+
 #season-info {
-    padding: 50px 0;
+    padding: 50px 25px;
     text-align: center;
 }
 
@@ -863,21 +866,20 @@ filter_section {
     max-width: 700px;
 }
 
-#season {
-    padding: 50px;
-}
+
 
 #season .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 3em;
-    padding: 20px 70px;
+    padding: 20px 100px;
 }
 
 #season .column {
     box-shadow: 0px 10px 40px -13px rgba(209, 209, 209, 1);
-    padding: 30px 20px;
     background-color: #fff;
+    text-align: center;
+    position: relative;
 }
 
 #season .row a {
@@ -916,8 +918,9 @@ filter_section {
 
 #fall_1 .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2em;
+    padding: 25px;
 }
 
 #fall_1 ul {
@@ -963,8 +966,8 @@ filter_section {
 .period-btn button {
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
-    color: #fff;
-    background-color: #68A849;
+    color: #000;
+    background-color: #f2f2f2;
     padding: 12px 30px;
     margin-right: 15px;
     border: none;
@@ -985,8 +988,9 @@ filter_section {
 
 #fall_2 .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2em;
+    padding: 25px;
 }
 
 #fall_2 ul {
@@ -1027,7 +1031,7 @@ filter_section {
 #spring_1 {
     padding: 50px 0;
     text-align: center;
-    background-color: #333F78;
+    background-color: #68A849;
     color: #fff;
 }
 
@@ -1037,8 +1041,9 @@ filter_section {
 
 #spring_1 .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2em;
+    padding: 25px;
 }
 
 #spring_1 ul {
@@ -1079,7 +1084,7 @@ filter_section {
 #spring_2 {
     padding: 50px 0;
     text-align: center;
-    background-color: #333F78;
+    background-color: #68A849;
     color: #fff;
 }
 
@@ -1089,8 +1094,9 @@ filter_section {
 
 #spring_2 .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2em;
+    padding: 25px;
 }
 
 #spring_2 ul {
@@ -1776,6 +1782,11 @@ footer h3 {
 /* MIN-WIDTH 992px ========================= */
 
 @media only screen and (min-width: 992px) {
+
+    #season {
+        padding: 50px;
+    }
+
     .main-menu {
         width: auto;
     }
@@ -2232,6 +2243,10 @@ footer h3 {
 @media only screen and (max-width: 480px) {
     .main-menu {
         width: 100%;
+    }
+
+    .map-box {
+        width: 300px !important;
     }
 
 }
